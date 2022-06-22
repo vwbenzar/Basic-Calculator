@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			case "Division":
 				
 				if($FirstNumber == 0 && $SecondNumber == 0){
-					$CalculatorResult = "Cannot do Computation!";
+					$CalculatorResult = "Can't divide by 0 !";
 				}
 				else{
 					$CalculatorResult = $FirstNumber / $SecondNumber;
