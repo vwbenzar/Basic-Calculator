@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title> Write a simple calculator program in PHP using the switch statement by T4Tutorials.com
+    <title> Basic Calculator
     </title>
 </head>
 <?php
@@ -20,9 +20,18 @@ if (is_numeric($FirstNumber) && is_numeric($SecondNumber)) {
             $CalculatorResult = $FirstNumber * $SecondNumber;
             break;
         case "Division":
-            $CalculatorResult = $FirstNumber / $SecondNumber;
+            
+			if($FirstNumber == 0 && $SecondNumber == 0){
+				$CalculatorResult = "Cannot do Computation!";
+			}
+			else{
+				$CalculatorResult = $FirstNumber / $SecondNumber;
+			}
+			break;
+		return $CalculatorResult;
     }
 }
+
 ?>
 
 <body>
