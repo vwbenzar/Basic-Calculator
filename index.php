@@ -3,7 +3,10 @@
     <title> Basic Calculator
     </title>
 </head>
+
+<body>
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $FirstNumber = $_POST['FirstNumber'];
 $SecondNumber = $_POST['SecondNumber'];
 $operator = $_POST['operator'];
@@ -31,10 +34,10 @@ if (is_numeric($FirstNumber) && is_numeric($SecondNumber)) {
 		return $CalculatorResult;
     }
 }
+}
 
 ?>
 
-<body>
 <div id="page-wrap">
     <h1>PHP - Simple Calculator Program</h1>
     <form action="" method="post" id="quiz-form">
