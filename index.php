@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$FirstNumber = $_POST['FirstNumber'];
 	$SecondNumber = $_POST['SecondNumber'];
 	$operator = $_POST['operator'];
-	
+
 	if (is_numeric($FirstNumber) && is_numeric($SecondNumber)) {
 		switch ($operator) {
 			case "Sum":
@@ -26,8 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				$CalculatorResult = $FirstNumber * $SecondNumber;
 				break;
 			case "Division":
-				
-				if($FirstNumber == 0 && $SecondNumber == 0){
+
+				if(!(is_null($FirstNumber)) && $SecondNumber == 0){
 					$CalculatorResult = "Can't divide by 0 !";
 				}
 				else{
